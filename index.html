@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аналіз студентів</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Аналіз успішності студентів</h1>
+        <form id="student-form">
+            <label for="surname">Прізвище:</label>
+            <input type="text" id="surname" name="surname" required>
+            <div class="grades">
+                <label for="math">Математика:</label>
+                <input type="number" id="math" class="grade" name="math" min="2" max="5" required>
+                <label for="physics">Фізика:</label>
+                <input type="number" id="physics" class="grade" name="physics" min="2" max="5" required>
+                <label for="history">Історія:</label>
+                <input type="number" id="history" class="grade" name="history" min="2" max="5" required>
+                <label for="language">Українська мова:</label>
+                <input type="number" id="language" class="grade" name="language" min="2" max="5" required>
+                <label for="informatics">Інформатика:</label>
+                <input type="number" id="informatics" class="grade" name="informatics" min="2" max="5" required>
+            </div>
+            <button type="submit">Додати студента</button>
+        </form>
+        <div id="summary">
+            <h2>Зведення</h2>
+            <p>Відмінників: <span id="excellent-count">0</span></p>
+            <p>Хорошистів: <span id="good-count">0</span></p>
+            <p>Неуспішних: <span id="failed-count">0</span></p>
+            <h3>Неуспішні студенти:</h3>
+            <ul id="failed-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
